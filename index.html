@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Form with Navigation in JPOB</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="page-header text-center">
+      <h3>Employee Form using JPDB API</h3>
+    </div>
+    <form action="" id="empform" method="post">
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-3 text-center my-auto">Employee ID:</label>
+        <div class="col-sm-9">
+          <input type="text" id="empid" class="form-control" onchange="getEmpFromEmpID()" />
+          <!-- <input type="text" id="empid" class="form-control" onchange="getRequest()" /> -->
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-3 text-center m-auto">
+          Employee Name:
+        </label>
+        <div class="col-sm-9">
+          <input type="text" id="empname" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-3 text-center m-auto">
+          Basic Salaray:
+        </label>
+        <div class="col-sm-9">
+          <input type="number" id="empsal" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-3 text-center m-auto">
+          HRA:
+        </label>
+        <div class="col-sm-9">
+          <input type="number" id="hra" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-3 text-center m-auto">
+          DA:
+        </label>
+        <div class="col-sm-9">
+          <input type="text" id="da" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-form-label col-sm-3 text-center m-auto">
+          Deduction:
+        </label>
+        <div class="col-sm-9">
+          <input type="text" id="deduct" class="form-control" />
+        </div>
+      </div>
+    </form>
+
+    <div>
+      <nav class="navbar navbar-default text-center" style="border: none">
+        <button class="btn btn-lg btn-primary" id="new" onclick="newForm()" type="button">New</button><button
+          class="btn btn-lg btn-primary" id="save" onclick="saveData()" type="button">Save</button><button
+          class="btn btn-lg btn-primary" id="edit" onclick="editData()" type="button">Edit
+        </button>
+
+        <button class="btn btn-lg btn-primary" id="change" onclick="changeData()" type="button">Change</button>
+
+        <button class="btn btn-lg btn-primary" id="reset" onclick="resetForm()" type="button">Reset</button>
+      </nav>
+
+      <nav class="navbar navbar-default text-center" style="border: none">
+        <button class="btn btn-lg btn-primary" id="first" onclick="getFirst()" type="button">First</button>
+        <button class="btn btn-lg btn-primary" id="prev" onclick="getPrev()" type="button">Prev</button>
+        <button class="btn btn-lg btn-primary" id="next" onclick="getNext()" type="button">Next</button>
+        <button class="btn btn-lg btn-primary" id="last" onclick="getLast()" type="button">Last</button>
+
+      </nav>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
